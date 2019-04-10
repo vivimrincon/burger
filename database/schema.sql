@@ -16,5 +16,5 @@ CREATE TABLE left_burgers (
 
 CREATE TABLE right_burgers (
     BurgersEatenID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    BurgersEatenName VARCHAR(100) NOT NULL,
+    BurgersEatenName VARCHAR(100) NOT NULL
 );

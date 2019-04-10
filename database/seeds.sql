@@ -5,8 +5,8 @@
 
 INSERT INTO left_burgers (BurgerName, Devoured)
 VALUES
-    (Burger Stack,FALSE),
-    (Veggie Burger, FALSE),
-    (Korean Cheesesteak,FALSE),
-    (Mushroom Cheesesteak, FALSE)
+    ("Burger Stack",FALSE),
+    ("Veggie Burger", FALSE),
+    ("Korean Cheesesteak", FALSE),
+    ("Mushroom Cheesesteak", FALSE)
 ;
