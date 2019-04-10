@@ -11,7 +11,7 @@ USE `burgers_db`;
 CREATE TABLE left_burgers (
     BurgersID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     BurgerName VARCHAR(100) NOT NULL,
-    Devoured TINYINT(1)
+    Devoured BOOLEAN DEFAULT false
 );
 
 CREATE TABLE right_burgers (
