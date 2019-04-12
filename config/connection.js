@@ -14,8 +14,7 @@ const connection = mysql.createConnection({
 });
 connection.connect(function(err) {
     if (err) throw err;
-    console.log("connected as id " + connection.threadId);
-    connection.end();
+    console.log("Connected to MySQL Server as id " + connection.threadId);
 });
 
-module.exports = connection;
+module.exports = connection; // will be set a module in orm.js
