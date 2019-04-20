@@ -1,8 +1,7 @@
 const burger = require('../models/burger');
 const express = require('express');
-
 // The Router instance is a complete middleware and routing system
-const router = express.Router();
+let router = express.Router();
 
 // GET route
 router.get('/', function(req, res) {
@@ -26,8 +25,8 @@ router.post('/burgers/create', function(req, res) {
 });
 
 // PUT route
-router.put('/burgers/:id', function(req, res) {
-    burger.update(req.params.id, function(results) {
+router.put('/burgers/:BurgersID', function(req, res) {
+    burger.update(req.params.BurgersID, function(results) {
         console.log(results);
         res.sendStatus(200);
     });
