@@ -3,7 +3,7 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 const expresshandlebars = require('express-handlebars');
-const controlroutes = require('./controllers/burgers_controller');
+let controlroutes = require('./controllers/burgers_controller.js');
 
 /* server.js starts a server and listens on port 8080 for connections. 
 The app responds with the html&css in public directory created as handlebars,
@@ -12,9 +12,9 @@ For every other path, it will respond with a 404 Not Found.
 */
 
 // Static content... public directory
-app.use(express.static(__dirname + 'public'));
+app.use(express.static('public'));
 
-app.use(express.urlencoded({ extended: true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.engine('handlebars', expresshandlebars({ defaultLayout: 'main'}));

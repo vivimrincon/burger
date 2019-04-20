@@ -13,13 +13,14 @@ router.get('/', function(req, res) {
 router.get('/burgers', function(req, res) {
     burger.all(function(sandwhichData) {
         // res.render renders a view template
-        res.render('index', { sandwhich_data: sandwhichData});
+        res.render('index', { sandwhich_data: sandwhichData });
     });
 });
 
 // POST route
 router.post('/burgers/create', function(req, res) {
-    burger.create(req.body.burger_name, function(results) {
+    burger.create(req.body.BurgerName, function(results) {
+        console.log(results);
         res.redirect('/'); //which would then redirect to /burgers
     });
 });
@@ -27,6 +28,7 @@ router.post('/burgers/create', function(req, res) {
 // PUT route
 router.put('/burgers/:id', function(req, res) {
     burger.update(req.params.id, function(results) {
+        console.log(results);
         res.sendStatus(200);
     });
 });

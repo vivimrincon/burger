@@ -17,4 +17,4 @@ connection.connect(function(err) {
     console.log("Connected to MySQL Server as id " + connection.threadId);
 });
 
-module.exports = connection; // will be set a module in orm.js
+module.exports = connection; // will be set as module in orm.js

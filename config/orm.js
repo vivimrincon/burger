@@ -2,7 +2,7 @@ const connection = require('./connection'); // MySQL Server Connection
 
 //test#1
 function printQuestionMarks(num) {
-    const arr = []
+    let arr = [];
 
     for (let i = 0; i < num; i++) {
         arr.push("?");
@@ -29,7 +29,7 @@ exports.all = function(table, cb) {
         if (error) throw error;
         console.log('all-results:', results); //works
         //console.log('all-fields:', fields); //works
-        cb(results);
+        cb(results)
     });
 };
 
